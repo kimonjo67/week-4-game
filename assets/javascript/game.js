@@ -1,6 +1,5 @@
 window.onload = function() {
 
-console.log("hello");
 
 // Create the variables
     var randomNumber;
@@ -13,7 +12,7 @@ console.log("hello");
     var totalscore;
 
 
-// Display 0 for wins and losses before game starts
+// Display using IDs on HTML
 $('#wins').html(wins);
 $('#losses').html(losses);
 
@@ -22,23 +21,9 @@ function getRandom(min, max) {
   return Math.floor(Math.random()*(max - min) + min);
 }
 
-function game() {
-  if (totalscore === randomNumber) {
-    wins++
-    $('#wins').html(wins);
-    alert("You Won");
-    
 
-  }
-  else if (totalscore > randomNumber){
-    losses++
-    $('#losses').html(losses);
-    alert("You lost, try again");
-  }
-}
-// Set random number (19-120)
-randomNumber = getRandom(19, 120);
-$("#number").html(randomNumber);
+// Reset game once over
+function Reset(){
 
 // Set Gem 1 through 4 (1-12 points)
 
@@ -55,39 +40,58 @@ gem4 = getRandom(1,12);
 console.log(gem4);
 
 
-
-// Set total score to 0
+randomNumber = getRandom(19, 120);
+$("#number").html(randomNumber);
 
 totalscore = 0;
 $("#totalscore").html(totalscore);
 console.log(totalscore);
-// Create the buttons in HTML and link them
+
+// Create the buttons in HTML and link them with on click functions.
 $("#gem1").click(function() {
   totalscore= gem1 + totalscore;
   $("#totalscore").html(totalscore);
   console.log(totalscore);
  game();
-
 });
-
 
 $( "#gem2" ).click(function() {
    totalscore= gem2 + totalscore;
    $("#totalscore").html(totalscore);
-   game()
+   game();
+});
 
-});
 $( "#gem3" ).click(function() {
-   totalscore= gem3 + totalscore;;
+   totalscore= gem3 + totalscore;
    $("#totalscore").html(totalscore);
-   game()
+   game();
 });
+
 $( "#gem4" ).click(function() {
    totalscore= gem4 + totalscore;
    $("#totalscore").html(totalscore);
-   game()
+   game();
 });
 
+}
+Reset();
+
+
+function game() {
+  if (totalscore === randomNumber) {
+    wins++;
+    $('#wins').html(wins);
+    alert("You Won");
+    Reset();
+  }
+  else if (totalscore > randomNumber){
+    losses++;
+    $('#losses').html(losses);
+    alert("You lost, try again");
+    Reset();
+  }
+  game();
+}
 
 // Capture the click and add the gems value total score
 
@@ -96,7 +100,5 @@ $( "#gem4" ).click(function() {
 
 // IF total score is greater than random number =loss
 // Reset game 
-
-
 
 }
