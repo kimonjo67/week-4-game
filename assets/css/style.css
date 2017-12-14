@@ -32,9 +32,9 @@ body {
   float:left;
   margin:5px;
 }
-/*#gem1{
-  background-image: url(..images/blue-crystal.png);
-}*/
+.container .jumbotron {
+padding-left: 150px;
+}
 
 #totalscore{
     width: 150px;

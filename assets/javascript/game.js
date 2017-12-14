@@ -39,10 +39,11 @@ console.log(gem3);
 gem4 = getRandom(1,12);
 console.log(gem4);
 
-
+//Generate a random number when pages loads
 randomNumber = getRandom(19, 120);
 $("#number").html(randomNumber);
 
+//Display 0 in totalscore before game starts
 totalscore = 0;
 $("#totalscore").html(totalscore);
 console.log(totalscore);
@@ -73,7 +74,7 @@ $( "#gem4" ).click(function() {
    game();
 });
 
-}
+};
 Reset();
 
 
@@ -91,14 +92,6 @@ function game() {
     Reset();
   }
   game();
-}
+};
 
-// Capture the click and add the gems value total score
-
-// When total number = ramdon number add 1 to wins
-
-
-// IF total score is greater than random number =loss
-// Reset game 
-
-}
+};
