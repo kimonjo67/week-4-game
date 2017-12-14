@@ -1,0 +1,72 @@
+body {
+  background-image: url(../images/crystal_collector.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*h1{
+  background-color: salmon;
+  padding: 20px;
+  width: 200px;
+}*/
+
+#number{
+  width: 150px;
+  height: 100px;
+  background-color: #1b8500;;
+  margin:5px;
+  text-align: center;
+  font-size: 50px;
+}
+#wins, #losses{
+  width: 150px;
+  height: 80px;
+  background-color: #1b8500;
+  margin:5px;
+  text-align: center;
+  font-size: 50px;
+}
+#gem1, #gem2, #gem3, #gem4{
+  width: 80px;
+  height: 80px;
+  background-color: #1b8500;
+  float:left;
+  margin:5px;
+}
+/*#gem1{
+  background-image: url(..images/blue-crystal.png);
+}*/
+
+#totalscore{
+    width: 150px;
+  height: 80px;
+  background-color: #1b8500;;
+  float: left;
+  margin:5px; 
+  text-align: center;
+  font-size: 50px;
+}
+p{
+  color: white;
+  font-size:20px;
+}
+
+.jumbotron { 
+    min-height: 200px;
+    background-color: transparent;
+    border: solid silver;
+    color: white;
+ }
+
+ .col-md-6{
+  border: solid silver;
+ }
+
+<div id="number"></div>
+<div id="wins"></div>
+<div id="losses"></div>
+<div id="gem1"></div>
+<div id="gem2"></div>
+<div id="gem3"></div>
+<div id="gem4"></div>
+<p>Your totol score is</p>
+<div id="totalscore"></div>
