@@ -10,15 +10,15 @@ body {
 }*/
 
 #number{
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 80px;
   background-color: #1b8500;;
   margin:5px;
   text-align: center;
   font-size: 50px;
 }
 #wins, #losses{
-  width: 150px;
+  width: 100px;
   height: 80px;
   background-color: #1b8500;
   margin:5px;
@@ -51,7 +51,7 @@ p{
 }
 
 .jumbotron { 
-    min-height: 200px;
+    min-height: 100px;
     background-color: transparent;
     border: solid silver;
     color: white;
